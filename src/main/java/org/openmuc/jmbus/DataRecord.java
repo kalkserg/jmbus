@@ -578,7 +578,7 @@ public class DataRecord {
 
     private int decodeUserDefinedVif(byte[] buffer, int offset) throws DecodingException {
 
-        int length = buffer[offset];
+        int length = buffer[offset+1];
         StringBuilder sb = new StringBuilder();
         for (int i = offset + length; i > offset; i--) {
             sb.append((char) buffer[i]);
